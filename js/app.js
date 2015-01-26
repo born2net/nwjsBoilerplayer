@@ -1,10 +1,13 @@
-define(["underscore", "jquery"], function (_, $) {
-
+define(["underscore", "jquery", 'backbone', 'Elements'], function (_, $, backbone, Elements) {
+    var self = this;
     var gui = require('nw.gui');
     var mainAppWin = gui.Window.get();
     var tray;
 
-    $('#debugText').click(function(){
+    self.Elements = new Elements();
+
+
+    $(self.Elements.CLOSE_ME).click(function(){
         mainAppWin.close();
     });
 
