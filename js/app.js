@@ -14,7 +14,7 @@ define(["underscore", "jquery", 'backbone', 'Elements', 'Pepper', 'PepperHelper'
         mainAppWin.close();
     });
 
-    if (_.isEmpty(pass)){
+    if (_.isEmpty(pass)) {
         alert('User and password were not set...');
         return;
     }
@@ -29,6 +29,9 @@ define(["underscore", "jquery", 'backbone', 'Elements', 'Pepper', 'PepperHelper'
     process.on('close', function (code) {
     });
 
+    /**
+     Connect / Authenticate with the mediaCLOUD and load images
+     **/
     BB.Pepper.dbConnect(user, pass, function (i_status) {
         if (i_status.status) {
             var recResources = BB.Pepper.getResources();
@@ -81,15 +84,13 @@ define(["underscore", "jquery", 'backbone', 'Elements', 'Pepper', 'PepperHelper'
 
     function registerWinPosition() {
         if (localStorage.width && localStorage.height) {
-            mainAppWin.resizeTo(parseInt(localStorage.width),
-                parseInt(localStorage.height));
+            mainAppWin.resizeTo(parseInt(localStorage.width), parseInt(localStorage.height));
         }
         if (localStorage.x && localStorage.y) {
             mainAppWin.moveTo(parseInt(localStorage.x),
                 parseInt(localStorage.y));
         } else {
             mainAppWin.moveTo(25, 25);
-
         }
     }
 
