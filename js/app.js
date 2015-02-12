@@ -1,3 +1,8 @@
+/**
+ Sample application for embedding node-web-kit inside the SignagePlayer
+ @app app.js
+ @license MIT
+ **/
 define(["underscore", "jquery", 'backbone', 'Elements', 'Pepper', 'PepperHelper'], function (_, $, backbone, Elements, Pepper, PepperHelper) {
     var self = this;
     var gui = require('nw.gui');
