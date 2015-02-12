@@ -22,8 +22,11 @@
   "window": {
     "title": "node-webkit boilerplate",
     "show": true,
-    "toolbar": false,
-    "frame": false,
+    "toolbar": true,
+    "frame": true,
+    "position": "center",
+    "width": 1280,
+    "height": 720,
     "min_width": 640,
     "min_height": 360
   },

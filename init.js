@@ -13,9 +13,13 @@ requirejs.config({
         'TweenMax': 'common/gsap/TweenMax',
         'TweenLite': 'common/gsap/TweenLite',
         'CSSPlugin': 'common/gsap/plugins/CSSPlugin',
+        'Base64': 'common/base64/jquery.base64',
         'localizer': 'common/localizer/dist/jquery.localize',
         'RC4': 'common/rc4/RC4',
+        'RC4V2': 'common/rc4/RC4V2',
         'Lib': 'common/libs/Lib',
+        'Pepper': 'libs/Pepper',
+        'PepperHelper': 'libs/PepperHelper',
         'ComBroker': 'common/comBroker/ComBroker',
         'Elements': 'Elements',
         'StackView': 'common/stackview/StackView'
@@ -50,6 +54,13 @@ requirejs.config({
         'CSSPlugin': {
             dep: ['TweenLite'],
             exports: 'CSSPlugin'
+        },
+        'Pepper': {
+            deps: ['jquery', 'Base64', 'RC4V2'],
+            exports: 'Pepper'
+        },
+        'PepperHelper': {
+            exports: 'PepperHelper'
         }
     }
 });
